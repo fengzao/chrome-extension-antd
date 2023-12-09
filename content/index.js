@@ -6,6 +6,18 @@ const App = () => {
 
     console.log("----------- App ------------")
 
+    const sendMsg = async () => {
+        console.log("-----------------------------------")
+        // 演示 content 页面和扩展程序 通过消息通讯
+        if (window.chrome && window.chrome.runtime) {
+            chrome.runtime.sendMessage({
+                a: 1, b: 2, c: 3
+            }).then(data => {
+                console.log("msg resp = ", data)
+            })
+        }
+    }
+
     return (
         <div style={{
             bottom: 100,
@@ -17,7 +29,7 @@ const App = () => {
             borderRadius: 40,
             position: "fixed"
         }}>
-            <div style={{ fontSize: 11, marginTop: "10px" }}>
+            <div style={{ fontSize: 11, marginTop: "10px" }} onClick={() => sendMsg()}>
                 antd
             </div>
         </div>
