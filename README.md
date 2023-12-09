@@ -1,5 +1,7 @@
 # chrome extension with react antd 
 
+> 项目演示了
+
 ### 1 项目关键结构
 
 ```
@@ -14,7 +16,7 @@
 - index.html            // Popup 弹出页 html 模板
 - manifest.json         // 清单文件
 - images                // 系统共享的图片文件
-- _dist_                // webpack 编译目录文件,  可基于该目录测试及打包.   该目录在执行npm run build / watch 后执行
+- _dist_                // webpack 编译目录文件,  可基于该目录测试及打包. 
 - ...                   // 其他标准 npm 项目标准文件
 
 ```
