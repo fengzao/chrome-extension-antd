@@ -21,6 +21,7 @@ function getHtmlPlugins(chunks) {
 
 module.exports = {
     mode: "development",
+    devtool: 'cheap-module-source-map',
     entry: {
         content: "./content/index.js",
         popup: "./popup/index.js"

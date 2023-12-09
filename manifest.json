@@ -11,5 +11,19 @@
         "pages": [
             "popup/index.html"
         ]
-    }
+    },
+    "content_security_policy": {
+        "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';",
+        "sandboxed_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "content/index.js"
+            ],
+            "matches": [
+                "https://ant-design.antgroup.com/components/*"
+            ]
+        }
+    ]
 }
